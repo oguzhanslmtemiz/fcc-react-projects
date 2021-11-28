@@ -1,0 +1,55 @@
+.animation {
+  transition: all 0.5s ease-out;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  #quote-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 10px 0px;
+    #text {
+      font-size: 1.5rem;
+      margin-top: 16px;
+      margin-bottom: 0px;
+      svg {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+      }
+      [data-icon="spinner"] {
+        animation: fa-spin 2s linear infinite;
+      }
+    }
+    #author {
+      font-size: 1rem;
+      margin-bottom: 0px;
+      text-align: right;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      align-self: stretch;
+      margin-bottom: 30px;
+      .button {
+        text-decoration: none;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 2px;
+        color: white;
+        padding: 10px;
+        box-shadow: black 6px 6px 6px 0px;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@700&display=swap");
+
+$blue: #5ab2f0;
+$green: #c3efd1;
+$btnsBackgroundColor: #1f1f1f;
+$gray: #292b2f;
+$displayColor: #33393f;
+$width: 258px;
+$padding: 10px;
+
+.container {
+  position: relative;
+  margin: 1% auto;
+  width: $width + (2 * $padding + 20);
+  border: 4px solid #373737;
+  border-radius: 8px;
+  background-color: $btnsBackgroundColor;
+  &::before {
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    width: 160px;
+    height: 4px;
+    border-radius: 2px;
+    z-index: 1;
+    background-color: #1e1e1e;
+    content: "";
+  }
+  &::after {
+    position: absolute;
+    bottom: 0px;
+    left: 70px;
+    width: 160px;
+    height: 4px;
+    z-index: 1;
+    border-radius: 2px;
+    background-color: #1e1e1e;
+    content: "";
+  }
+  .phone {
+    position: relative;
+    border: 10px solid black;
+    border-top: 70px solid black;
+    border-bottom: 50px solid black;
+    border-radius: 8px;
+    user-select: none;
+    &::before {
+      content: "SONY";
+      position: absolute;
+      top: -50px;
+      left: $width / 2 - 14px;
+      font-size: 1.1em;
+      font-family: "Montagu Slab", serif;
+      font-weight: bold;
+      color: rgba(169, 169, 169, 0.25);
+    }
+    &::after {
+      content: "by oguzhanslmtemiz";
+      position: absolute;
+      bottom: -30px;
+      right: $width / 2 - 50px;
+      font-size: 0.7em;
+      font-family: "Montagu Slab", serif;
+      color: rgba(169, 169, 169, 0.25);
+    }
+    .phone-btns {
+      &::before {
+        position: absolute;
+        bottom: 40px;
+        right: -17px;
+        z-index: -1;
+        width: 4px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: #444444;
+        content: "";
+      }
+      &::after {
+        position: absolute;
+        bottom: 100px;
+        right: -17px;
+        z-index: -1;
+        width: 4px;
+        height: 80px;
+        border-radius: 4px;
+        background-color: #444444;
+        content: "";
+      }
+    }
+    .camera {
+      &::before {
+        position: absolute;
+        top: -51px;
+        left: 14px;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        z-index: 2;
+        background-color: #202020;
+        content: "";
+      }
+      &::after {
+        position: absolute;
+        top: -55px;
+        left: 10px;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        background-color: rgba(169, 169, 169, 0.3);
+        content: "";
+      }
+    }
+    .sensor {
+      &::before {
+        position: absolute;
+        top: -51px;
+        right: 10px;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        z-index: 2;
+        background-color: #202020;
+        content: "";
+      }
+      &::after {
+        position: absolute;
+        top: -55px;
+        right: 20px;
+        width: 22px;
+        height: 14px;
+        border-radius: 11px;
+        background-color: rgba(169, 169, 169, 0.1);
+        content: "";
+      }
+    }
+  }
+}
+
+.display {
+  height: 60px;
+  width: $width;
+  padding: $padding;
+  padding-top: 20px;
+  font-size: 2rem;
+  text-align: right;
+  background-color: $displayColor;
+  color: white;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+}
+
+.buttons {
+  display: grid;
+  width: $width;
+  height: 340px;
+  padding: $padding;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "clear clear backspace divide"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    "zero decimal equals equals";
+  background-color: $btnsBackgroundColor;
+  & > button {
+    border: none;
+    border-radius: 1.4rem;
+    font-size: 1.2em;
+    height: 60px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .clear {
+    background-color: $green;
+    grid-area: clear;
+  }
+
+  .backspace {
+    grid-area: backspace;
+    background-color: $blue;
+  }
+
+  .divide {
+    grid-area: divide;
+    background-color: $blue;
+  }
+
+  .seven {
+    grid-area: seven;
+    background-color: $gray;
+    color: white;
+  }
+
+  .eight {
+    grid-area: eight;
+    background-color: $gray;
+    color: white;
+  }
+
+  .nine {
+    grid-area: nine;
+    background-color: $gray;
+    color: white;
+  }
+
+  .multiply {
+    grid-area: multiply;
+    background-color: $blue;
+  }
+
+  .four {
+    grid-area: four;
+    background-color: $gray;
+    color: white;
+  }
+
+  .five {
+    grid-area: five;
+    background-color: $gray;
+    color: white;
+  }
+
+  .six {
+    grid-area: six;
+    background-color: $gray;
+    color: white;
+  }
+
+  .subtract {
+    grid-area: subtract;
+    background-color: $blue;
+  }
+
+  .one {
+    grid-area: one;
+    background-color: $gray;
+    color: white;
+  }
+
+  .two {
+    grid-area: two;
+    background-color: $gray;
+    color: white;
+  }
+
+  .three {
+    grid-area: three;
+    background-color: $gray;
+    color: white;
+  }
+
+  .add {
+    grid-area: add;
+    background-color: $blue;
+  }
+
+  .zero {
+    grid-area: zero;
+    background-color: $gray;
+    color: white;
+  }
+
+  .decimal {
+    grid-area: decimal;
+    background-color: $gray;
+    color: white;
+  }
+
+  .equals {
+    grid-area: equals;
+  }
+}

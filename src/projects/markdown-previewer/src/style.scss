@@ -1,0 +1,67 @@
+$c1: #90AACB;
+$c2: #FFB085;
+$c3: #F9D5A7;
+$c4: #FEF1E6;
+
+body {
+  background-color: $c1;
+  .App > h1 {
+    color: $c2;
+    text-align: center;
+  }
+  .footer {
+    text-align: center;
+    padding: 30px;
+    color: $c2;
+    > a {
+      text-decoration: none;
+      color: $c3;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: $c2;
+    padding-bottom: 4rem;
+    .wrapper {
+      overflow-wrap: break-word;
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      > h1 {
+        color: $c1;
+        text-align: center;
+      }
+      #editor,
+      #preview {
+        box-sizing: border-box;
+        border: 4px solid $c1;
+        background-color: $c4;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+      }
+      #editor {
+        resize: none;
+      }
+      :focus-visible {
+        outline: none;
+      }
+      #preview {
+        pre {
+          display: block;
+          overflow: auto;
+          background: white;
+          padding: 5px;
+          line-height: 1.2;
+        }
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
