@@ -50,16 +50,18 @@ const PomodoroClock = () => {
   }, [state]);
 
   return (
-    <>
-      <h1 className="title">Pomodoro Clock</h1>
-      <Clock props={[state, setState]} />
-      <audio
-        id="beep"
-        ref={alarm}
-        preload="auto"
-        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
-      ></audio>
-    </>
+    <div className="pomodoro-clock">
+      <div className="pomodoro-clock-container">
+        <h1 className="title">Pomodoro Clock</h1>
+        <Clock props={[state, setState]} />
+        <audio
+          id="beep"
+          ref={alarm}
+          preload="auto"
+          src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+        ></audio>
+      </div>
+    </div>
   );
 };
 

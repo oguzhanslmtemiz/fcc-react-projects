@@ -7,24 +7,26 @@ import "./DrumMachine.scss";
 
 const DrumMachine = () => {
   return (
-    <div id="drum-machine">
-      <Display />
-      <h1 className="title">DRUM MACHINE</h1>
-      <div className="title2">
-        <span className="title2-1">MPX9</span>
-        <span className="title2-2">MOBILE SAMPLE PLAYER</span>
-      </div>
-      <ControlPanel />
-      <div className="pad-container">
-        {bank.map((item, i) => (
-          <DrumPad
-            count={i + 1}
-            key={item.keyCode}
-            keyCode={item.keyCode}
-            keyTrigger={item.keyTrigger}
-            data={item.data}
-          />
-        ))}
+    <div className="drum-machine">
+      <div id="drum-machine">
+        <Display />
+        <h1 className="title">DRUM MACHINE</h1>
+        <div className="title2">
+          <span className="title2-1">MPX9</span>
+          <span className="title2-2">MOBILE SAMPLE PLAYER</span>
+        </div>
+        <ControlPanel />
+        <div className="pad-container">
+          {bank.map((item, i) => (
+            <DrumPad
+              count={i + 1}
+              key={item.keyCode}
+              keyCode={item.keyCode}
+              keyTrigger={item.keyTrigger}
+              data={item.data}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

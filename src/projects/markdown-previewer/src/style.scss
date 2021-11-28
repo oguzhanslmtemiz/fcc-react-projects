@@ -1,13 +1,15 @@
-$c1: #90AACB;
-$c2: #FFB085;
-$c3: #F9D5A7;
-$c4: #FEF1E6;
+.markdown-preview {
+  $c1: #90aacb;
+  $c2: #ffb085;
+  $c3: #f9d5a7;
+  $c4: #fef1e6;
 
-body {
   background-color: $c1;
-  .App > h1 {
+  & > h1 {
     color: $c2;
     text-align: center;
+    margin-top: 0;
+    padding-top: 0.67em;
   }
   .footer {
     text-align: center;

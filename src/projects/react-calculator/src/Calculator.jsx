@@ -144,13 +144,15 @@ const Calculator = () => {
   }
 
   return (
-    <div className="container">
-      <div className="phone">
-        <div className="phone-btns" />
-        <div className="camera" />
-        <div className="sensor" />
-        <Display display={state.display} />
-        <Buttons onClickHandler={onClickHandler} />
+    <div className="react-calculator">
+      <div className="container">
+        <div className="phone">
+          <div className="phone-btns" />
+          <div className="camera" />
+          <div className="sensor" />
+          <Display display={state.display} />
+          <Buttons onClickHandler={onClickHandler} />
+        </div>
       </div>
     </div>
   );

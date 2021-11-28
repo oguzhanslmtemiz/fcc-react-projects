@@ -9,7 +9,7 @@ const store = createStore(markedReducer);
 const App = () => {
   return (
     <Provider store={store}>
-      <MarkdownPreview />
+      <MarkdownPreview/>
     </Provider>
   );
 };

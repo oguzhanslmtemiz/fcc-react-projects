@@ -26,47 +26,53 @@ export default class Quotes extends Component {
     let randomColorIndex = Math.floor(Math.random() * this.props.colors.length);
     let randomColor = this.props.colors[randomColorIndex];
     return (
-      <div
-        className="container animation"
-        style={{ backgroundColor: randomColor }}
-      >
-        <div id="quote-box">
-          <blockquote id="quote">
-            <p id="text" className="animation" style={{ color: randomColor }}>
-              <FontAwesomeIcon icon={icon} />
-              {quote}
-            </p>
-            <p id="author" className="animation" style={{ color: randomColor }}>
-              {author ? "- " + author : author}
-            </p>
-          </blockquote>
-          <div className="buttons">
-            <a
-              className="button animation"
-              href={
-                "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
-                '"' +
-                quote +
-                '" ' +
-                "- " +
-                author
-              }
-              target="_blank"
-              rel="noreferrer"
-              id="tweet-quote"
-              style={{ backgroundColor: randomColor }}
-            >
-              <FontAwesomeIcon icon={faTwitter} />
-              Tweet
-            </a>
-            <button
-              className="button animation"
-              id="new-quote"
-              onClick={this.handleNewQuote}
-              style={{ backgroundColor: randomColor }}
-            >
-              New Quote
-            </button>
+      <div className="random-quote-machine">
+        <div
+          className="container animation"
+          style={{ backgroundColor: randomColor }}
+        >
+          <div id="quote-box">
+            <blockquote id="quote">
+              <p id="text" className="animation" style={{ color: randomColor }}>
+                <FontAwesomeIcon icon={icon} />
+                {quote}
+              </p>
+              <p
+                id="author"
+                className="animation"
+                style={{ color: randomColor }}
+              >
+                {author ? "- " + author : author}
+              </p>
+            </blockquote>
+            <div className="buttons">
+              <a
+                className="button animation"
+                href={
+                  "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" +
+                  '"' +
+                  quote +
+                  '" ' +
+                  "- " +
+                  author
+                }
+                target="_blank"
+                rel="noreferrer"
+                id="tweet-quote"
+                style={{ backgroundColor: randomColor }}
+              >
+                <FontAwesomeIcon icon={faTwitter} />
+                Tweet
+              </a>
+              <button
+                className="button animation"
+                id="new-quote"
+                onClick={this.handleNewQuote}
+                style={{ backgroundColor: randomColor }}
+              >
+                New Quote
+              </button>
+            </div>
           </div>
         </div>
       </div>

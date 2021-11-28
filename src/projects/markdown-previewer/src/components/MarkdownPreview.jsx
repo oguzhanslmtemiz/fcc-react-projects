@@ -3,7 +3,7 @@ import Preview from "./Preview";
 
 function MarkdownPreview() {
   return (
-    <>
+    <div className="markdown-preview">
       <h1>Markdown Preview</h1>
       <div className="container">
         <Editor />
@@ -19,7 +19,7 @@ function MarkdownPreview() {
           oguzhanslmtemiz
         </a>
       </div>
-    </>
+    </div>
   );
 }
 
