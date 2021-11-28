@@ -24,17 +24,17 @@ const PomodoroClock = lazy(() =>
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/fcc-react-projects">
       <Nav />
       <div className="App">
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="*" element={<Home />} />
-            <Route path="randomQuoteMachine" element={<RandomQuoteMachine />} />
-            <Route path="markdownPreview" element={<MarkdownPreview />} />
-            <Route path="drumMachine" element={<DrumMachine />} />
-            <Route path="calculator" element={<Calculator />} />
-            <Route path="pomodoroClock" element={<PomodoroClock />} />
+            <Route path="/randomQuoteMachine" element={<RandomQuoteMachine />} />
+            <Route path="/markdownPreview" element={<MarkdownPreview />} />
+            <Route path="/drumMachine" element={<DrumMachine />} />
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/pomodoroClock" element={<PomodoroClock />} />
           </Routes>
         </Suspense>
       </div>

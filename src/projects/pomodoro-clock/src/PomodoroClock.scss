@@ -2,8 +2,15 @@
 
 .pomodoro-clock {
   $screen-sm-max: 576px;
+  $screen-smH-max: 410px;
+
   @mixin sm {
     @media (max-width: #{$screen-sm-max}) {
+      @content;
+    }
+  }
+  @mixin smH {
+    @media (max-height: #{$screen-smH-max}) {
       @content;
     }
   }
@@ -21,6 +28,9 @@
     text-align: center;
     color: white;
     @include sm {
+      height: unset;
+    }
+    @include smH {
       height: unset;
     }
     &:after {
